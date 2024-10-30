@@ -71,6 +71,11 @@
     transform: scale(0.9);
 }
 
+.middle-section .middle-buttons {
+    display: flex;
+    gap: 10px;
+}
+
 .middle-section .reset-game {
     padding: 15px;
     background-color: #0a99eb;
@@ -80,6 +85,8 @@
     border: none;
     cursor: pointer;
 }
+
+
 
 /* javascript elements */
 

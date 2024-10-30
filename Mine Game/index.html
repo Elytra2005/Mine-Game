@@ -15,13 +15,15 @@
             <div class="inner-score">
                 <div>
                      <p class="score">0</p> 
-
                 </div>
             </div>
         </section>
         <section class="middle-section">
             <h1 class="result-announce"> </h1>
-            <button class="reset-game" onclick="resetGame()">Restart Game</button>
+            <div class="middle-buttons">
+                <button class="reset-game" onclick="resetGame()">Restart Game</button>
+                <button class="reset-game" onclick="resetScore()">Restart Game</button>
+            </div>
             <div class="hold-boxes">
                 <div class="inner-box" onclick="boomornot()"><img id="dynamic-image" class="invisible"/> <p class="hidden-number"></p></div>
                 <div class="inner-box" onclick="boomornot()"><img id="dynamic-image" class="invisible"/> <p class="hidden-number"></p></div>

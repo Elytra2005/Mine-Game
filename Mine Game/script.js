@@ -18,38 +18,37 @@ function boomornot(box) {
     let currentScore = Number(score.innerHTML);
 
     if (generate > 5) {
-        // alert(generate + " Boom!");
+        alert(generate + " Boom!");
         hiddenNumber.innerHTML = generate;
         imageResult.src = "images/bomb.png";
         imageResult.classList.add("visible");
-        score.innerHTML = currentScore - 50;
+        currentScore -= 50;
+        score.innerHTML = currentScore;  
         checks = false;
         resultAnnounce.innerHTML = "You lost the game!";
-
-        // removes cursor the player does not accidentaly click on one of the tiles
         mineBoxes.forEach(function(box) {
             box.style.pointerEvents = "none";
         });
-
-
-        
     } else {
-        // alert("continue");
+        alert("continue");
         hiddenNumber.innerHTML = '';
-        score.innerHTML = currentScore + scoreValue;
+        currentScore += scoreValue;
+        score.innerHTML = currentScore;  
         imageResult.src = "images/diamond.webp";
         imageResult.classList.add("visible");
         checks = true;
         resultAnnounce.innerHTML = "nice catch!";
         box.classList.add("remove-cursor");
-
     }
+    
 
-    // saving the local storage
     localStorage.setItem("savedScore", currentScore)
     score.innerHTML = localStorage.getItem("savedScore");
   
 }
+
+
+
 
 // Attach event listeners to each box
 mineBoxes.forEach((box) => {
