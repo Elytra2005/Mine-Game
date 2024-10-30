@@ -18,7 +18,6 @@ function boomornot(box) {
     let currentScore = Number(score.innerHTML);
 
     if (generate > 5) {
-        alert(generate + " Boom!");
         hiddenNumber.innerHTML = generate;
         imageResult.src = "images/bomb.png";
         imageResult.classList.add("visible");
@@ -30,7 +29,6 @@ function boomornot(box) {
             box.style.pointerEvents = "none";
         });
     } else {
-        alert("continue");
         hiddenNumber.innerHTML = '';
         currentScore += scoreValue;
         score.innerHTML = currentScore;  
