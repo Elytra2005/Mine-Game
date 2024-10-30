@@ -5,4 +5,5 @@ function resetGame() {
 
 function resetScore() {
     localStorage.clear();
+    location.reload();
 }
